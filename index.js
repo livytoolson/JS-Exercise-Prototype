@@ -98,6 +98,7 @@ Car.prototype.fill = function(gallons){
 
 Car.prototype.drive = function(miles){
   this.odometer = this.odometer + miles;
+  this.tank = this.tank - (miles / this.milesPerGallon);
 }
 
 /*
