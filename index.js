@@ -135,8 +135,8 @@ babyOne.play();
   In your own words explain the four principles for the "this" keyword below:
   1. Window Binding: the "this" keyword defaults to the window 
   2. Implicit Binding: only applied to objects with methods. When the function is invoked, look to the left of the dot to figure out what the "this" is referring to.
-  3. Explicit Binding: 
-  4. New Binding: 
+  3. Explicit Binding: call - immediately invokes the function and you pass in the arguments one by one, apply - immediately invokes the function and you pass in the arugment as an array, bind - you pass in the arguments one by one, you must invoke the new function that is returned at the end
+  4. New Binding: using the new keyword creates a new object that the "this" keyword points to.
 */
 
 
