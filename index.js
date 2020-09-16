@@ -108,17 +108,35 @@ Car.prototype.drive = function(miles){
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby(name, age, favoriteToy) {
-  
+  Person.call(this, name, age);
+  this.name = name;
+  this.age = age;
+  this.favoriteToy = favoriteToy;
 }
+
+Baby.prototype = Object.create(Person.prototype);
+
+Baby.prototype.play = function(){
+  console.log(`Playing with ${this.favoriteToy}`);
+}
+
+const babyOne = new Baby({
+  name: 'Graham',
+  age: '2',
+  favoriteToy: 'Hot Wheels',
+});
+
+babyOne.play();
+
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding: the "this" keyword defaults to the window 
+  2. Implicit Binding: only applied to objects with methods. When the function is invoked, look to the left of the dot to figure out what the "this" is referring to.
+  3. Explicit Binding: 
+  4. New Binding: 
 */
 
 
